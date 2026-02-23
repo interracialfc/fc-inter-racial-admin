@@ -18,6 +18,18 @@ export const playerType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'slug',
+      title: 'Permalink',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96,
+        // Optional: ensures slugs are unique across all 'player' documents
+        isUnique: (slug, context) => context.defaultIsUnique(slug, context),
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'profilePicture',
       title: 'Profile Picture',
       type: 'image',
