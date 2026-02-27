@@ -10,11 +10,8 @@ export const schemaTypes = [
   playerType,
   slideType,
   albumType,
-<<<<<<< HEAD
-  productType
-=======
+  productType,
   achievementType
->>>>>>> a5643bf (achievements schema)
   // ... any other types you have
 ]
 
