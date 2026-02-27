@@ -14,5 +14,3 @@ export const schemaTypes = [
   achievementType
   // ... any other types you have
 ]
-
-// test deployment 2

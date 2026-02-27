@@ -75,7 +75,19 @@ export const productType = defineType({
       name: 'description',
       title: 'Description',
       type: 'text',
-      rows: 4,
+      rows: 5,
+    }),
+    defineField({
+      name: 'button',
+      title: 'Buy Button',
+      type: 'string',
+      initialValue: 'Message us to Order',
+    }),
+    defineField({
+      name: 'buttonLink',
+      title: 'Buy Link',
+      type: 'string',
+      description: 'We could hook this up with Shopee (leave empty to disable button)',
     }),
   ],
 });
