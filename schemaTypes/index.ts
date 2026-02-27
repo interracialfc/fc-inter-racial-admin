@@ -13,4 +13,4 @@ export const schemaTypes = [
   // ... any other types you have
 ]
 
-// test deployment
+// test deployment 2
