@@ -4,6 +4,13 @@ export const slideType = defineType({
   name: 'slide',
   title: 'Slides',
   type: 'document',
+  fieldsets: [
+    {
+      name: 'buttonGroup',
+      title: 'Call to Action Button',
+      options: { collapsible: true, collapsed: false }
+    }
+  ],
   fields: [
     defineField({
       name: 'title',
@@ -42,6 +49,20 @@ export const slideType = defineType({
         }
       ],
       validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'button',
+      title: 'Button Label',
+      type: 'string',
+      initialValue: 'Message us to Order',
+      fieldset: 'buttonGroup',
+    }),
+    defineField({
+      name: 'buttonLink',
+      title: 'Button Link',
+      type: 'string',
+      description: 'Link to Achievements, Gallery or Product (leave empty to hide button)',
+      fieldset: 'buttonGroup', 
     }),
   ],
   preview: {
