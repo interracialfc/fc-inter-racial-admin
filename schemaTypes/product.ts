@@ -14,6 +14,15 @@ export const productType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'date',
+      title: 'Published Date',
+      type: 'date',
+      description: '(for sorting purposes)',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+      }
+    }),
+    defineField({
       name: 'slug',
       title: 'Permalink',
       type: 'slug',

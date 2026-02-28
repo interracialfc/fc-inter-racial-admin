@@ -12,6 +12,15 @@ export const slideType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'date',
+      title: 'Date',
+      type: 'date',
+      description: '(for sorting purposes)',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+      }
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'text', // Use 'text' for a multi-line description field
