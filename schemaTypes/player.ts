@@ -1,14 +1,12 @@
 import {defineField, defineType} from 'sanity'
-import {UserIcon} from '@sanity/icons' // Optional: if you have sanity icons installed
+import {UsersIcon} from '@sanity/icons' // Optional: if you have sanity icons installed
 
 export const playerType = defineType({
   name: 'player',
   title: 'Players',
   type: 'document',
-  icon: UserIcon,
-  fieldsets: [
-    { name: 'social', title: 'Social Media Links' }
-  ],
+  icon: UsersIcon,
+  fieldsets: [{name: 'social', title: 'Social Media Links'}],
   fields: [
     // --- Basic Info ---
     defineField({
@@ -41,8 +39,8 @@ export const playerType = defineType({
           name: 'alt',
           type: 'string',
           title: 'Alternative Text',
-        }
-      ]
+        },
+      ],
     }),
     defineField({
       name: 'squadNumber',
@@ -71,7 +69,7 @@ export const playerType = defineType({
       type: 'date',
       options: {
         dateFormat: 'YYYY-MM-DD',
-      }
+      },
     }),
     defineField({
       name: 'nationality',
@@ -88,8 +86,8 @@ export const playerType = defineType({
     defineField({
       name: 'bio',
       title: 'Biography',
-      type: 'array', 
-      of: [{type: 'block'}] // Allows for rich text (bold, links, etc.)
+      type: 'array',
+      of: [{type: 'block'}], // Allows for rich text (bold, links, etc.)
     }),
     defineField({
       name: 'formerClubs',
@@ -106,9 +104,9 @@ export const playerType = defineType({
       of: [
         {
           type: 'image',
-          options: { hotspot: true },
-          fields: [{ name: 'caption', type: 'string', title: 'Caption' }]
-        }
+          options: {hotspot: true},
+          fields: [{name: 'caption', type: 'string', title: 'Caption'}],
+        },
       ],
     }),
 
@@ -138,6 +136,6 @@ export const playerType = defineType({
         subtitle: subtitle ? `#${subtitle}` : 'No number assigned',
         media,
       }
-    }
+    },
   },
 })
