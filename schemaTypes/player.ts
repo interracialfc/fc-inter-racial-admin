@@ -58,6 +58,7 @@ export const playerType = defineType({
           {title: 'Midfielder', value: 'MF'},
           {title: 'Forward', value: 'FW'},
           {title: 'Coaching', value: 'CH'},
+          {title: 'Others / Staff', value: 'OTH'},
         ],
       },
     }),
@@ -128,7 +129,7 @@ export const playerType = defineType({
     select: {
       title: 'name',
       subtitle: 'squadNumber',
-      media: 'gallery.0', // Shows the first image of the gallery as the thumbnail
+      media: 'profilePicture', // Shows the profile picture as the thumbnail
     },
     prepare({title, subtitle, media}) {
       return {
